@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 12:31:47 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMTE6Mzk6NTcgIjszMjAy"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMTI6MzE6NDcgIjsxOzMzMDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2" type="Real" array="False" size=""/>
+            <comment text="Declara duas variaveis de tipos reais chamadas &quot;num1&quot; e &quot;num2&quot; para armazenar os numeros inseridos pelo usu&#225;rio"/>
+            <declare name="operacao" type="String" array="False" size=""/>
+            <comment text="Vari&#225;vel para armazenar a opera&#231;&#227;o matem&#225;tica.&#13;&#10;"/>
+            <output expression="&quot;Digite o primeiro n&#250;mero:&quot;" newline="True"/>
+            <comment text="Printa na tela do us&#225;rio&#13;&#10;"/>
+            <input variable="num1"/>
+            <comment text="L&#234; o valor que o usu&#225;rio digitou"/>
+            <output expression="&quot;Digite a opera&#231;&#227;o desejada: +para Soma, - para Subtra&#231;&#227;o, * para multiplica&#231;&#227;o e / para divis&#227;o&quot;" newline="True"/>
+            <input variable="operacao"/>
+            <comment text="Armazena o valor da opera&#231;&#227;o"/>
+            <if expression="operacao=&quot;+&quot; or&#13;&#10;operacao=&quot;-&quot; or&#13;&#10;operacao=&quot;/&quot; or&#13;&#10;operacao=&quot;*&quot;">
+                <then>
+                    <output expression="&quot;Digite o segundo n&#250;mero:&quot;" newline="True"/>
+                    <input variable="num2"/>
+                    <comment text="Armazena o valor do n&#250;mero 2.&#13;&#10;"/>
+                </then>
+                <else>
+                    <output expression="&quot;Valor da opera&#231;&#227;o inv&#225;lida&quot;" newline="True"/>
+                    <comment text="Se o valor n&#227;o for nenhuma dos operados aritm&#233;ticos validos este printa uma mensagem e finaliza"/>
+                </else>
+            </if>
+            <if expression="operacao=&quot;+&quot;">
+                <then>
+                    <output expression="&quot;Resultado =&quot;&amp;num1+num2" newline="True"/>
+                </then>
+                <else>
+                    <if expression="operacao=&quot;-&quot;">
+                        <then>
+                            <output expression="&quot;Resultado =&quot;&amp;num1-num2" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="operacao=&quot;*&quot;">
+                                <then>
+                                    <output expression="&quot;Resultado =&quot;&amp;num1*num2" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="operacao=&quot;/&quot;">
+                                        <then>
+                                            <output expression="&quot;Resultado =&quot;&amp;num1/num2" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
