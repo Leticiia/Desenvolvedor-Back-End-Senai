@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DevBackEnd2s24"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-27 02:19:45 "/>
+        <attribute name="saved" value="2024-07-27 03:06:03 "/>
         <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMTI6MzE6NTUgIjszMTkz"/>
-        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMDI6MTk6NDUgIjszOzMzMDc="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMDM6MDY6MDMgIjs0OzMyOTk="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -15,7 +15,7 @@
             <output expression="&quot;Informe o n&#250;mero que iremos confirmar se &#233; PAR ou &#205;MPAR:&quot;" newline="True"/>
             <input variable="num1"/>
             <assign variable="verificar" expression="num1%2"/>
-            <if expression="verificar=(num1%2) and verificar==0">
+            <if expression="verificar==0">
                 <then>
                     <output expression="&quot;N&#250;mero &#233; par&quot;" newline="True"/>
                 </then>
