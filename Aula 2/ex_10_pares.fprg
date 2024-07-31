@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="NOte"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-30 08:46:38 "/>
+        <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDc6NTk6MzkgIjsyNjYw"/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDg6NDY6MzggIjsxOzI3NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ALGORITMO QUE APRESENTE OS 10 PRIMEIROS N&#218;MEROS PARES (USE LOOPING WHILE)"/>
+            <declare name="num, cont" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="0"/>
+            <assign variable="cont" expression="0"/>
+            <while expression="cont &lt; 10">
+                <if expression="num%2==0">
+                    <then>
+                        <output expression="num" newline="True"/>
+                        <assign variable="cont" expression="cont +1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="num" expression="num + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
