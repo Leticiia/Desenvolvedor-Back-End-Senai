@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="NOte"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-30 09:12:32 "/>
+        <attribute name="saved" value="2024-07-30 09:48:15 "/>
         <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDg6NDY6NDggIjsyNjU3"/>
-        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6MTI6MzIgIjsxOzI3NTI="/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6NDg6MTUgIjsyOzI3NjM="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -15,7 +15,7 @@
             <declare name="altura, maior, menor, soma" type="Real" array="False" size=""/>
             <declare name="i" type="Integer" array="False" size=""/>
             <assign variable="soma" expression="0"/>
-            <for variable="i" start="1" end="3" direction="inc" step="1">
+            <for variable="i" start="1" end="10" direction="inc" step="1">
                 <output expression="&quot;Informe sua altura:&quot;" newline="True"/>
                 <input variable="altura"/>
                 <if expression="i == 1">
