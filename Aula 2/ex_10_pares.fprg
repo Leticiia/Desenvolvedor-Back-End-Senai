@@ -4,27 +4,33 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="NOte"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-30 08:46:38 "/>
+        <attribute name="saved" value="2024-08-03 11:02:35 "/>
         <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDc6NTk6MzkgIjsyNjYw"/>
         <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDg6NDY6MzggIjsxOzI3NjQ="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTE6MDI6MzUgIjsxOzMyOTE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="ALGORITMO QUE APRESENTE OS 10 PRIMEIROS N&#218;MEROS PARES (USE LOOPING WHILE)"/>
             <declare name="num, cont" type="Integer" array="False" size=""/>
+            <comment text="O n&#250;mero precisa ser iniciado com algum valor"/>
             <assign variable="num" expression="0"/>
             <assign variable="cont" expression="0"/>
+            <comment text="Neste caso, foi necess&#225;rio ter um contador para realizar o looping 10 vezes"/>
             <while expression="cont &lt; 10">
                 <if expression="num%2==0">
                     <then>
                         <output expression="num" newline="True"/>
                         <assign variable="cont" expression="cont +1"/>
+                        <comment text="Necess&#225;rio incrementar o contador"/>
                     </then>
                     <else/>
                 </if>
+                <comment text="ap&#243;s sair do &quot;se&quot; incrementar o n&#250;mero iniciado "/>
                 <assign variable="num" expression="num + 1"/>
             </while>
+            <comment text="J&#225; finalizado o looping"/>
         </body>
     </function>
 </flowgorithm>
