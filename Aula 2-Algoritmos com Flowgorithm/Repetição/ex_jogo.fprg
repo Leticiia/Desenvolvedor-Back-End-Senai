@@ -4,32 +4,36 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="NOte"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-08-03 11:24:28 "/>
+        <attribute name="saved" value="2024-08-03 02:19:42 "/>
         <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6MTI6MzcgIjsyNjQ5"/>
         <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6NDU6MjAgIjsyOzI3NTY="/>
-        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTE6MjQ6MjggIjsxOzMyOTc="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDI6MTk6NDIgIjszOzMyOTk="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="ALGORITMO EM FORMA DE JOGO. APRESENTE UMA TABUADA AO USU&#193;RIO, O USU&#193;RIO DEVE DIGITAR O RESULTADO CORRETO DA TABUADA, CASO ERRE, O JOGO FINALIZA. (USE DO...WHILE)"/>
-            <declare name="num, resposta" type="Integer" array="False" size=""/>
+            <declare name="num, resposta, i" type="Integer" array="False" size=""/>
             <comment text="precisamos de uma variavel que ser&#225; parte da tabuada e varie e uma outra para verificar a resposta do usuario"/>
-            <assign variable="num" expression="1"/>
-            <do expression="resposta !=num*3">
-                <output expression="&quot;Quanto &#233; 3 x&quot; &amp;num&amp; &quot;?&quot;" newline="True"/>
+            <assign variable="i" expression="0"/>
+            <output expression="&quot;Informe qual tabuada deseja praticar:&quot;" newline="True"/>
+            <input variable="i"/>
+            <assign variable="num" expression="0"/>
+            <do expression="resposta =num*i and num &lt;10">
+                <assign variable="num" expression="num+1"/>
+                <output expression="&quot;Quanto &#233; &quot;&amp;i&amp;&quot; x&quot; &amp;num&amp; &quot;?&quot;" newline="True"/>
                 <input variable="resposta"/>
-                <if expression="resposta == 3*num">
-                    <then>
-                        <comment text="Verifica se a resposta for correta dada pelo usuario"/>
-                        <assign variable="num" expression="num +1"/>
-                    </then>
-                    <else>
-                        <output expression="&quot;Resposta errada, o jogo acabou!&quot;" newline="True"/>
-                    </else>
-                </if>
                 <comment text="Fa&#231;a o looping das perguntas, enquanto a resposta n&#227;o estiver errada"/>
             </do>
+            <if expression="num&gt;=10">
+                <then>
+                    <output expression="&quot;Ganhou o jogo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Perdeu o jogo&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Acabou o jogo&quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>
