@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="NOte"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 10:57:30 "/>
+        <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDg6NDY6NDggIjsyNjU3"/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6NDg6MTUgIjsyOzI3NjM="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTA6NTc6MzAgIjsxOzMyOTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ALGORITMO QUE LEIA A ALTURA DE 10 PESSOAS, EM SEGUIDA APRESENTE A MAIOR E MENOR ALTURA E A M&#201;DIA DE ALTURA. (USE LOOPING FOR)&#8203;"/>
+            <declare name="altura, maior, menor, soma" type="Real" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="soma" expression="0"/>
+            <comment text="Precisamos de um contador que esta zerado, quando ele passa pelo primeiro looping o contador ser&#225; 1 e armazena e j&#225; inicia as variaveis de altura maior e menor"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;Informe sua altura:&quot;" newline="True"/>
+                <input variable="altura"/>
+                <if expression="i == 1">
+                    <then>
+                        <assign variable="maior" expression="altura"/>
+                        <assign variable="menor" expression="altura"/>
+                    </then>
+                    <else>
+                        <comment text="Quando meu looping corre pela segunda vez ele estar&#225; falso e portanto preciso verificar qual a maior e menor para atribuir corretamente a variavel"/>
+                        <if expression="altura &gt; maior">
+                            <then>
+                                <assign variable="maior" expression="altura"/>
+                            </then>
+                            <else>
+                                <if expression="altura&lt; menor">
+                                    <then>
+                                        <assign variable="menor" expression="altura"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <comment text="Quando o looping corre antes de fazer o proximo ele ira fazer a soma das alturas"/>
+                <assign variable="soma" expression="soma + altura"/>
+            </for>
+            <comment text="Looping finalizado, hora de declarar o a maior altura, menor e fazer a media"/>
+            <output expression="&quot;Maior altura:&quot; &amp;maior" newline="True"/>
+            <output expression="&quot;Menor altura&quot; &amp;menor" newline="True"/>
+            <output expression="&quot;M&#233;dia das alturas:&quot;&amp;soma/10" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 03:50:19 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMDM6MjU6NDIgIjszMTky"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wNy0yNzsiMDM6NTA6MTkgIjsxOzMzMDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2" type="Real" array="False" size=""/>
+            <declare name="operacao, repeticao" type="String" array="False" size=""/>
+            <do expression="repeticao!=&quot;&quot;">
+                <output expression="&quot;Digite o primeiro n&#250;mero:&quot;" newline="True"/>
+                <input variable="num1"/>
+                <output expression="&quot;Digite a opera&#231;&#227;o desejada (+ para Soma, - para Subtra&#231;&#227;o, * para Multiplica&#231;&#227;o ou / para divis&#227;o):&quot;" newline="True"/>
+                <input variable="operacao"/>
+                <while expression="operacao!=&quot;+&quot; and&#13;&#10;operacao!=&quot;-&quot; and&#13;&#10;operacao!=&quot;*&quot; and&#13;&#10;operacao!=&quot;/&quot;">
+                    <output expression="&quot;OP&#199;&#195;O INV&#193;LIDA&quot;" newline="True"/>
+                    <output expression="&quot;Digite a opera&#231;&#227;o desejada (+ para Soma, - para Subtra&#231;&#227;o, * para Multiplica&#231;&#227;o ou / para divis&#227;o):&quot;" newline="True"/>
+                    <input variable="operacao"/>
+                </while>
+                <output expression="&quot;Digite o segundo n&#250;mero:&quot;" newline="True"/>
+                <input variable="num2"/>
+                <output expression="&quot;Digite qualquer tecla para continuar&quot;" newline="True"/>
+                <input variable="repeticao"/>
+            </do>
+            <output expression="" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
