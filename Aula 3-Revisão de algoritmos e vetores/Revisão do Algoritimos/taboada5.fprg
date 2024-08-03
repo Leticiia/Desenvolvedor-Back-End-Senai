@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 12:43:54 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTI6MzQ6NDQgIjszMTg5"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTI6MzQ6NTEgIjsxO0RldkJhY2tFbmQyczI0O0VTTjUxMi0xMjQyOTg2OzIwMjQtMDgtMDM7IjEyOjE3OjEwICI7ZW5xdWFudG8uZnByZzs3OTQ4"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTI6NDM6NTQgIjsyOzMyOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="taboada, i, repeticao" type="Integer" array="False" size=""/>
+            <assign variable="taboada" expression="5"/>
+            <output expression="&quot;Quantas vezes este n&#250;mero ir&#225; repetir?&quot;" newline="True"/>
+            <input variable="repeticao"/>
+            <for variable="i" start="1" end="repeticao" direction="inc" step="1">
+                <output expression="taboada &amp;&quot;X&quot;&amp; i &amp;&quot;=&quot;&amp; taboada*i" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 02:58:05 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDI6NDI6NDcgIjszMTkw"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDI6NTg6MDUgIjsyOzMzMDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="altura" type="Real" array="True" size="3"/>
+            <comment text="Variavel vetor altura armazena os valores de altura dos usu&#225;rios.&#13;&#10;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Vari&#225;vel i &#233; uma variavel contadora&#13;&#10;"/>
+            <comment text=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <comment text="Looping para receber altura de 3 pessoas"/>
+                <output expression="&quot;Digite sua altura:&quot;" newline="True"/>
+                <input variable="altura[i]"/>
+                <comment text="Ao ler a altura a variavel i representa a posi&#231;&#227;o do vetor"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <comment text="Looping para apresentar os valores do vetor altura"/>
+                <output expression="i+1&amp;&quot;&#176; altura &#233; o valor correspondente:&quot;&amp;altura[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

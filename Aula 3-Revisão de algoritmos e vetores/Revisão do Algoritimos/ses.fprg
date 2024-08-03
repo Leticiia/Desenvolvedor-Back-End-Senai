@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 10:41:29 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDk6MTg6MjUgIjszMTk2"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTA6NDE6MjkgIjsyOzMyOTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <declare name="nomeUsuario" type="String" array="False" size=""/>
+            <declare name="veiculo" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Digite seu nome:&quot;" newline="True"/>
+            <input variable="nomeUsuario"/>
+            <output expression="&quot;Digite sua idade:&quot;" newline="True"/>
+            <input variable="idade"/>
+            <if expression="nomeUsuario = &quot;Maycon&quot; or nomeUsuario=&quot;Isa&#237;as&quot;">
+                <then>
+                    <if expression="idade &gt;= 18">
+                        <then>
+                            <output expression="&quot;Possui veiculo?&quot;" newline="True"/>
+                            <input variable="veiculo"/>
+                            <if expression="veiculo=True">
+                                <then>
+                                    <output expression="nomeUsuario&amp;&quot; vem ao trabalho com veiculo&quot;" newline="True"/>
+                                    <output expression="nomeUsuario &amp;&quot; voc&#234; &#233; o professor maior de idade, tem &quot;&amp;idade&amp;&quot; anos.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="nomeUsuario &amp;&quot; voc&#234; &#233; o professor maior de idade, tem &quot;&amp;idade&amp;&quot; anos e vem ao trabalho de &#244;nibus.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="nomeUsuario &amp;&quot; voc&#234; &#233; o professor, tem &quot;&amp;idade&amp;&quot; anos e &#233; menor de idade.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="idade &gt;=18 and idade &lt;=65">
+                        <then>
+                            <output expression="nomeUsuario&amp;&quot; voc&#234; &#233; um aluno maior de idade, tem &quot;&amp;idade&amp; &quot; anos e n&#227;o pode aposentar.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="idade&lt;18">
+                                <then>
+                                    <output expression="nomeUsuario&amp;&quot; voc&#234; &#233; um aluno, &#233; menor de idade com &quot;&amp;idade&amp; &quot; anos e ainda n&#227;o trabalha.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="nomeUsuario&amp;&quot; voc&#234; &#233; um aluno idoso com &quot;&amp;idade&amp; &quot; anos e est&#225; aposentado.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
