@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 12:34:17 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTI6MTc6MTAgIjszMTgz"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTI6MzQ6MTcgIjszOzMyOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hr" type="Real" array="False" size=""/>
+            <output expression="&quot;Informe que horas s&#227;o:&quot;" newline="True"/>
+            <input variable="hr"/>
+            <while expression="hr&gt;=9 and hr&lt;=13 or hr&gt;=14 and hr&lt;=18">
+                <output expression="&quot;Voc&#234; esta no Senai queimando neur&#244;nios&quot;" newline="True"/>
+                <output expression="&quot;Informe que horas s&#227;o:&quot;" newline="True"/>
+                <input variable="hr"/>
+            </while>
+            <output expression="&quot;Voc&#234; est&#225; no almo&#231;o ou j&#225; saiu do Senai&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

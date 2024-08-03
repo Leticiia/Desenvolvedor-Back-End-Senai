@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 09:37:48 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDk6MTg6MjUgIjszMTk2"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDk6Mzc6NDggIjsxOzMzMTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="texto, concatenacao" type="String" array="False" size=""/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite sua idade:&quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;Digite seu nome:&quot;" newline="True"/>
+            <input variable="texto"/>
+            <output expression="texto" newline="True"/>
+            <assign variable="concatenacao" expression="&quot;Ol&#225; &quot;&amp;texto&amp; &quot;sua idade &#233;: &quot;&amp;num&amp; &quot; anos.&quot;"/>
+            <output expression="concatenacao" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
