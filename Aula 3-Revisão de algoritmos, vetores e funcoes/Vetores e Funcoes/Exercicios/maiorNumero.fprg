@@ -4,14 +4,60 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DevBackEnd2s24"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-08-03 05:28:28 "/>
+        <attribute name="saved" value="2024-08-05 09:51:48 "/>
         <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDU6MTY6NTQgIjszMTky"/>
         <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDU6Mjg6MjggIjsxOzMzMDQ="/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wOC0wNTsiMDk6NTE6NDggIjs2OzI3NzA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="ALGORITMO QUE ENCONTRE O MAIOR N&#218;MERO DE UMA LISTA COM TAMANHO DEFINIDO PELO USU&#193;RIO. (USE VETORES E FUN&#199;&#213;ES)&#8203;"/>
+            <declare name="tamanho, maior, i" type="Integer" array="False" size=""/>
+            <comment text="&quot;tamanho&quot; ser&#225; usado para armazenar o tamanho da lista,&#10; &quot;maior&quot; armazenar&#225; o maior valor encontrado na lista,&#10; &quot;i&quot; &#233; o contador que ser&#225; utilizado nos loops"/>
+            <output expression="&quot;Digite o tamanho da lista:&quot;" newline="True"/>
+            <comment text=" Solicita ao usu&#225;rio o tamanho da lista que ser&#225; utilizado para definir o tamanho do vetor."/>
+            <input variable="tamanho"/>
+            <declare name="lista" type="Integer" array="True" size="tamanho"/>
+            <comment text="defini que a matriz lista dever&#225; ter o tamanho que o usu&#225;rio informou, e a lista &#233; o nome do meu vetor"/>
+            <for variable="i" start="0" end="tamanho-1" direction="inc" step="1">
+                <comment text="Loop para preencher o vetor &quot;lista&quot; com os valores fornecidos pelo usu&#225;ri"/>
+                <output expression="&quot;Digite o elemento para a lista em &quot;&amp;i+1&amp;&quot;&#176;:&quot;" newline="True"/>
+                <comment text="Solicita ao usu&#225;rio que insira um valor para cada posi&#231;&#227;o do vetor."/>
+                <input variable="lista[i]"/>
+            </for>
+            <for variable="i" start="0" end="tamanho-1" direction="inc" step="1">
+                <comment text="Loop para exibir todos os elementos da lista."/>
+                <output expression="&quot;Posi&#231;&#227;o&#176;&quot;&amp;i+1&amp; &quot;: &quot;&amp;lista[i]" newline="True"/>
+            </for>
+            <assign variable="maior" expression="maiorNum(lista,i,tamanho)"/>
+            <comment text=" Chama a fun&#231;&#227;o &quot;maiorNum&quot; para encontrar o maior valor na lista,e armazena o resultado na vari&#225;vel &quot;maior&quot;"/>
+            <output expression="&quot;O maior n&#250;mero da lista &#233;:&quot;&amp;maior" newline="True"/>
+            <comment text="Exibe o maior valor encontrado na lista."/>
+        </body>
+    </function>
+    <function name="maiorNum" type="Integer" variable="maior">
+        <parameters>
+            <parameter name="lista" type="Integer" array="True"/>
+            <parameter name="tamanho" type="Integer" array="False"/>
+            <parameter name="i" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="maior" type="Integer" array="False" size=""/>
+            <comment text="Declara&#231;&#227;o da vari&#225;vel &quot;maior&quot;, que ser&#225; usada para armazenar o maior valor encontrado."/>
+            <assign variable="maior" expression="lista[0]"/>
+            <comment text="Inicializa &quot;maior&quot; com o primeiro elemento da lista"/>
+            <for variable="i" start="1" end="tamanho-1" direction="inc" step="1">
+                <comment text="Loop para percorrer a lista a partir do segundo elemento at&#233; o &#250;ltimo"/>
+                <if expression="lista[i]&gt;maior">
+                    <then>
+                        <comment text=" Se o elemento atual for maior que &quot;maior&quot;, atualiza &quot;maior&quot; com o valor do elemento atual."/>
+                        <assign variable="maior" expression="lista[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Retorna o maior valor encontrado na lista."/>
         </body>
     </function>
 </flowgorithm>

@@ -4,22 +4,25 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DevBackEnd2s24"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-08-03 04:43:40 "/>
+        <attribute name="saved" value="2024-08-05 09:59:45 "/>
         <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDQ6MjA6MjIgIjszMTgx"/>
         <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDQ6NDM6NDAgIjs0OzMyOTc="/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wOC0wNTsiMDk6NTk6NDUgIjsxOzI3NzA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="ALGORITMO COM FUN&#199;&#195;O QUE CONVERTA FAHRENHEIT EM CELSIUS.&#8203;C&#193;LCULO: C = F-32 / 1,8&#8203;"/>
             <declare name="f, c" type="Real" array="False" size=""/>
-            <comment text="declara a variavel"/>
+            <comment text=" Declara vari&#225;veis para armazenar o valor em Fahrenheit (f) e o valor convertido para Celsius (c)."/>
             <output expression="&quot;Digite o valor de FAHRENHEIT:&quot;" newline="True"/>
+            <comment text=" Solicita ao usu&#225;rio que insira um valor em Fahrenheit."/>
             <input variable="f"/>
             <comment text="Usa informa&#231;&#227;o do FAHRENHEIT que deve-se converrter para Celsius"/>
             <assign variable="c" expression="converte(f)"/>
-            <comment text="Chama a fun&#231;&#227;o criada &quot;converte&quot; para realizar a convers&#227;o do valor"/>
+            <comment text="Chama a fun&#231;&#227;o &quot;converte&quot; para transformar o valor de Fahrenheit em Celsius e armazena o resultado na vari&#225;vel &quot;c&quot;."/>
             <output expression="&quot;O valor em Celsius &#233; de: &quot;&amp;c" newline="True"/>
+            <comment text="Exibe o valor convertido de Celsius ao usu&#225;rio."/>
         </body>
     </function>
     <function name="converte" type="Real" variable="c">
@@ -27,8 +30,12 @@
             <parameter name="f" type="Real" array="False"/>
         </parameters>
         <body>
+            <comment text="FUN&#199;&#195;O QUE CONVERTE FAHRENHEIT PARA CELSIUS"/>
             <declare name="c" type="Real" array="False" size=""/>
+            <comment text="Declara uma vari&#225;vel para armazenar o resultado da convers&#227;o."/>
             <assign variable="c" expression="(f-32)/1.8"/>
+            <comment text="Aplica a f&#243;rmula de convers&#227;o de Fahrenheit para Celsius e armazena o resultado em &quot;c&quot;."/>
+            <comment text="Retorna o valor convertido para Celsius."/>
         </body>
     </function>
 </flowgorithm>

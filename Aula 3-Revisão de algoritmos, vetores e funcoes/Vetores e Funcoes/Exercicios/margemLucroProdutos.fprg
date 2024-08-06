@@ -4,30 +4,39 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DevBackEnd2s24"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-08-03 05:16:38 "/>
+        <attribute name="saved" value="2024-08-05 09:56:43 "/>
         <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDQ6NDM6NDMgIjszMTg5"/>
         <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDU6MTY6MzggIjsyOzMzMDM="/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wOC0wNTsiMDk6NTY6NDMgIjsxOzI3NjU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="ALGORITMO QUE LEIA O NOME, O CUSTO E O PRE&#199;O DE 3 PRODUTOS, EM SEGUIDA APRESENTE A MARGEM DE LUCRO DE CADA PRODUTO. (USE VETORES)&#8203;&#13;&#10;"/>
             <declare name="nomeProduto" type="String" array="True" size="3"/>
+            <comment text=" Declara um vetor de textos para armazenar os nomes dos produtos."/>
             <declare name="margemLucro" type="Real" array="True" size="3"/>
+            <comment text=" Declara um vetor de n&#250;meros reais para armazenar a margem de lucro de cada produto."/>
             <declare name="custo, preco" type="Real" array="False" size=""/>
+            <comment text=" Declara vari&#225;veis para armazenar o custo e o pre&#231;o de cada produto."/>
             <declare name="i" type="Integer" array="False" size=""/>
+            <comment text="Declara uma vari&#225;vel contador para os loops."/>
             <for variable="i" start="0" end="2" direction="inc" step="1">
+                <comment text="Loop para ler informa&#231;&#245;es de 3 produtos"/>
                 <output expression="&quot;Digite o nome do produto:&quot;" newline="True"/>
                 <input variable="nomeProduto[i]"/>
-                <output expression="&quot;Digite o custo:&quot;" newline="True"/>
+                <output expression="&quot;Digite o seu custo:&quot;" newline="True"/>
+                <comment text="Solicita ao usu&#225;rio o custo do produto."/>
                 <input variable="custo"/>
                 <output expression="&quot;Informe o pre&#231;o deste produto:&quot;" newline="True"/>
                 <input variable="preco"/>
                 <assign variable="margemLucro[i]" expression="preco-custo"/>
-                <comment text="Margem de lucro deve atribuir o calculo e guardar o contador"/>
+                <comment text="Calcula a margem de lucro como a diferen&#231;a entre o pre&#231;o e o custo e armazena no vetor &quot;margemLucro&quot; na posi&#231;&#227;o correspondente."/>
             </for>
             <for variable="i" start="0" end="2" direction="inc" step="1">
+                <comment text=" Loop para exibir a margem de lucro de cada produto."/>
                 <output expression="nomeProduto[i] &amp;&quot; tem a margem de lucro de R$:&quot;&amp; margemLucro[i]" newline="True"/>
+                <comment text="Exibe o nome do produto e a margem de lucro correspondente."/>
             </for>
         </body>
     </function>
